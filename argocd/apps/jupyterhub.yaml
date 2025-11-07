@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jupyterhub
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/s-frw/homelab.git
+    targetRevision: main
+    path: argocd/apps/jupyterhub
+    helm:
+      valueFiles:
+        - ../../helm-values/jupyterhub-values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: jupyterhub
+  syncPolicy:
+    automated:
+      prune: false  
+      selfHeal: true
+

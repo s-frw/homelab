@@ -11,7 +11,7 @@ spec:
     path: argocd/helm-charts/jupyterhub
     helm:
       valueFiles:
-        - ../../../helm-values/jupyterhub-values.yaml
+        - ../../helm-values/jupyterhub-values.yaml
       releaseName: jupyterhub
   destination:
     server: https://kubernetes.default.svc

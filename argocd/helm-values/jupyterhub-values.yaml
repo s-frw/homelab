@@ -1,21 +1,36 @@
-hub:
-  config:
-    Authenticator:
-      admin_users:
-      - admin
-    JupyterHub:
-      admin_access: true
-prePuller:
-  continuous:
-    enabled: false
-  hook:
-    enabled: false
 proxy:
-  secretToken: your-secret-token
+  secretToken:
+    existingSecret: "proxy-secret"
+    key: "proxy-token"
+hub:
+  image:
+    name: jupyterhub/k8s-hub
+    tag: 2.4.0
+  extraEnv: {}
+
 singleuser:
   image:
-    name: jupyter/scipy-notebook
+    name: jupyter/base-notebook
     tag: latest
+  memory:
+    limit: 1G
+    guarantee: 512M
+  cpu:
+    limit: 1
+    guarantee: 0.5
   storage:
-    extraVolumeMounts: []
     type: dynamic
+    capacity: 1Gi
+
+ingress:
+  enabled: true
+  hosts:
+    - jupyter.homelab.local   
+  tls:
+    - secretName: homelab-tls
+      hosts:
+        - jupyter.homelab.local    
+
+rbac:
+  create: true
+

@@ -17,4 +17,5 @@ server:
       memory: 1Gi
 service:
   type: ClusterIP
-
+crds:
+  create: false

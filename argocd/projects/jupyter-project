@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: jupyter
+  namespace: argocd
+spec:
+  description: jupyterhub project
+  sourceRepos:
+    - https://github.com/s-frw/homelab.git
+  destinations:
+    - namespace: jupyter
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  namespaceResourceBlacklist:
+    - group: ''
+      kind: Event
+  description: "jupyterhub project"
+

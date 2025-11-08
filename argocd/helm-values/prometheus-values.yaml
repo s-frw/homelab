@@ -1,9 +1,11 @@
 alertmanager:
   persistentVolume:
+    storageClass: local-path
     enabled: true
     size: 5Gi
 server:
   persistentVolume:
+    storageClass: local-path
     enabled: true
     size: 10Gi
   resources:

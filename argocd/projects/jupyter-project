@@ -6,6 +6,7 @@ metadata:
 spec:
   description: jupyterhub project
   sourceRepos:
+    - https://jupyterhub.github.io/helm-chart/
     - https://github.com/s-frw/homelab.git
   destinations:
     - namespace: jupyter

@@ -10,8 +10,11 @@ spec:
     targetRevision: main
     path: argocd/helm-values
     helm:
+      chart: jupyterhub/jupyterhub
+      repoURL: https://jupyterhub.github.io/helm-chart/
       valueFiles:
         - ../helm-values/jupyterhub-values.yaml
+      releaseName: jupyterhub
   destination:
     server: https://kubernetes.default.svc
     namespace: jupyter

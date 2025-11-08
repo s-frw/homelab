@@ -1,0 +1,17 @@
+persistence:
+  enabled: true
+  size: 5Gi
+  storageClassName: standard  
+adminUser: admin
+adminPassword: admin
+service:
+  type: ClusterIP
+ingress:
+  enabled: true
+  hosts:
+    - grafana.homelab.local
+  tls:
+    - secretName: homelab-tls
+      hosts:
+        - grafana.homelab.local
+

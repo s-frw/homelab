@@ -1,0 +1,18 @@
+alertmanager:
+  persistentVolume:
+    enabled: true
+    size: 5Gi
+server:
+  persistentVolume:
+    enabled: true
+    size: 10Gi
+  resources:
+    limits:
+      cpu: 1
+      memory: 2Gi
+    requests:
+      cpu: 0.5
+      memory: 1Gi
+service:
+  type: ClusterIP
+

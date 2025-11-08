@@ -9,15 +9,15 @@ spec:
     repoURL: https://github.com/s-frw/homelab.git
     targetRevision: main
     path: argocd/helm-charts/jupyterhub
-    helm:  
+    helm:
       valueFiles:
-        - ../../helm-values/jupyterhub-values.yaml
+        - ../../../helm-values/jupyterhub-values.yaml
       releaseName: jupyterhub
   destination:
     server: https://kubernetes.default.svc
     namespace: jupyter
   syncPolicy:
     automated:
-      prune: false  
+      prune: true
       selfHeal: true
 

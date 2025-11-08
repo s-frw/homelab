@@ -9,9 +9,9 @@ service:
 ingress:
   enabled: true
   hosts:
-    - grafana.homelab.local
+    - grafana.local
   tls:
     - secretName: homelab-tls
       hosts:
-        - grafana.homelab.local
+        - grafana.local
 

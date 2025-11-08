@@ -23,11 +23,11 @@ singleuser:
 ingress:
   enabled: true
   hosts:
-    - jupyter.homelab.local   
+    - jupyter.local   
   tls:
     - secretName: homelab-tls
       hosts:
-        - jupyter.homelab.local    
+        - jupyter.local    
 
 rbac:
   create: true

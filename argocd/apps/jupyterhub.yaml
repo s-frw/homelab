@@ -8,12 +8,10 @@ spec:
   source:
     repoURL: https://github.com/s-frw/homelab.git
     targetRevision: main
-    path: argocd/helm-values
-    helm:
-      chart: jupyterhub/jupyterhub
-      repoURL: https://jupyterhub.github.io/helm-chart/
+    path: argocd/helm-charts/jupyterhub
+    helm:  
       valueFiles:
-        - jupyterhub-values.yaml
+        - ../../../helm-values/jupyterhub-values.yaml
       releaseName: jupyterhub
   destination:
     server: https://kubernetes.default.svc

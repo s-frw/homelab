@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/s-frw/homelab.git
     targetRevision: main
-    path: argocd/apps/jupyterhub
+    path: argocd/helm-values
     helm:
       valueFiles:
         - ../helm-values/jupyterhub-values.yaml

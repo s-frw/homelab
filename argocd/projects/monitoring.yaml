@@ -4,7 +4,7 @@ metadata:
   name: monitoring
   namespace: argocd
 spec:
-  description: Project for monitoring stack
+  description: project for Grafana and Prometheus stack
   sourceRepos:
     - https://github.com/s-frw/homelab.git   
   destinations:
@@ -13,5 +13,4 @@ spec:
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
-  namespaceResourceBlacklist: []
 

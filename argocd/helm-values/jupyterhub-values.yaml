@@ -1,7 +1,5 @@
 proxy:
-  secretToken:
-    existingSecret: "proxy-secret"
-    key: "proxy-token"
+  secretToken: null
 hub:
   image:
     name: jupyterhub/k8s-hub

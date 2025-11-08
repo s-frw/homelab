@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/s-frw/homelab.git
     targetRevision: main
-    path: argocd/helm-charts/prometheus
+    path: argocd/helm-charts/kube-prometheus-stack
     helm:
       valueFiles:
         - ../../helm-values/prometheus-values.yaml

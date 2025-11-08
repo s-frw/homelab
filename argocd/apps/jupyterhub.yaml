@@ -13,7 +13,7 @@ spec:
       chart: jupyterhub/jupyterhub
       repoURL: https://jupyterhub.github.io/helm-chart/
       valueFiles:
-        - ../helm-values/jupyterhub-values.yaml
+        - jupyterhub-values.yaml
       releaseName: jupyterhub
   destination:
     server: https://kubernetes.default.svc

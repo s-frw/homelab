@@ -2,6 +2,9 @@ persistence:
   enabled: true
   size: 5Gi
   storageClassName: local-path 
+securityContext:
+  fsGroup: 472
+  runAsUser: 472
 adminUser: admin
 adminPassword: admin
 service:

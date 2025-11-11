@@ -1,19 +1,39 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kube-prometheus-stack
+  name: monitoring
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/s-frw/homelab'
-    targetRevision: main             
-    path: helm-chart/kube-prometheus-stack
+    repoURL: 'https://github.com/s-frw/homelab.git'
+    targetRevision: main
+    path: argocd/helm-charts/kube-prometheus-stack
     helm:
       releaseName: kube-prom
-      valueFiles:
-        - ../../helm-values/prometheus-values.yaml
-        - ../../helm-values/grafana-values.yaml
+      values: |
+        grafana:
+          adminUser: admin
+          adminPassword: admin
+          service:
+            type: LoadBalancer
+            loadBalancerIP: 192.168.122.240   
+          persistence:
+            enabled: true
+            size: 5Gi
+        prometheus:
+          service:
+            type: LoadBalancer
+            loadBalancerIP: 192.168.122.242   
+          prometheusSpec:
+            retention: 7d
+            storageSpec:
+              volumeClaimTemplate:
+                spec:
+                  accessModes: ["ReadWriteOnce"]
+                  resources:
+                    requests:
+                      storage: 10Gi
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
@@ -21,6 +41,4 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
 

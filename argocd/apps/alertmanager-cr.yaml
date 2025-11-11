@@ -1,0 +1,9 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Alertmanager
+metadata:
+  name: kube-prom-kube-prometheus-alertmanager
+  namespace: monitoring
+spec:
+  replicas: 1
+  serviceAccountName: kube-prom-kube-prometheus-alertmanager
+

@@ -1,0 +1,9 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: kube-prom-kube-prometheus-prometheus
+  namespace: monitoring
+spec:
+  replicas: 1
+  serviceAccountName: kube-prom-kube-prometheus-prometheus
+

@@ -8,15 +8,6 @@ The setup uses **Terraform** to create and configure four KVM virtual machines:
 - **Control Plane:** `c1-cp1` (5 GB RAM)
 - **Worker Nodes:** `c1-node1`, `c1-node2`, `c1-node3` (3 GB RAM each)
 
-Once provisioned, Kubernetes is installed and configured with:
-
-**Argo CD** - GitOps continuous delivery  
-**MetalLB** - LoadBalancer for bare-metal IP allocation  
-**Prometheus & Grafana** - Monitoring and visualization  
-**JupyterHub** - Multi-user data science environment  
-**FastAPI + LLM Sentiment Endpoint (pending)** - Example AI service deployed via Argo CD  
-**Kubeflow (pending)** - Automate AI workflows
-
 # Infrastructure Layout
 
 | VM Name     | Role          | IP Address       | RAM  | Disk Image Path |
@@ -25,6 +16,15 @@ Once provisioned, Kubernetes is installed and configured with:
 | `c1-node1`   | Worker Node    | `192.168.122.10` | 3 GB | `/var/lib/libvirt/images/c1-node1.qcow2` |
 | `c1-node2`   | Worker Node    | `192.168.122.12` | 3 GB | `/var/lib/libvirt/images/c1-node2.qcow2` |
 | `c1-node3`   | Worker Node    | `192.168.122.13` | 3 GB | `/var/lib/libvirt/images/c1-node3.qcow2` |
+
+Once provisioned, Kubernetes is installed and configured with:
+
+**Argo CD** - GitOps continuous delivery  
+**MetalLB** - LoadBalancer for bare-metal IP allocation  
+**Prometheus & Grafana** - Monitoring and visualization  
+**JupyterHub** - Multi-user data science environment  
+**FastAPI + LLM Sentiment Endpoint (pending)** - Example AI service deployed via Argo CD  
+**Kubeflow (pending)** - Automate AI workflows
 
 # **Kubernetes Stack**
 

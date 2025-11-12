@@ -13,8 +13,8 @@ Once provisioned, Kubernetes is installed and configured with:
 **Argo CD** - GitOps continuous delivery  
 **MetalLB** - LoadBalancer for bare-metal IP allocation  
 **Prometheus & Grafana** - Monitoring and visualization  
-**JupyterHub** - Multi-user data science environment  
-**FastAPI + LLM Sentiment Endpoint (pending)** - Example AI service deployed via Argo CD
+**JupyterHub** - Multi-user data science environment
+**FastAPI + LLM Sentiment Endpoint (pending)** - Example AI service deployed via Argo CD  
 **Kubeflow (pending)** - Automate AI workflows
 
 # Infrastructure Layout

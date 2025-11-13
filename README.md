@@ -52,3 +52,16 @@ Once provisioned, Kubernetes is installed and configured with:
 Add entries to `/etc/hosts` for local access, e.g.:*
 ```bash
 192.168.122.244  argocd.local grafana.local prometheus.local jupyter.local llm.local dashboard.local
+
+---
+
+# Screenshots
+
+### JupyterHub
+
+![JupyterHub UI](screenshots/jupyterhub.png)
+
+### Grafana
+
+![Grafana UI](screenshots/grafana1.png)
+![Grafana UI](screenshots/grafana2.png)

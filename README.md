@@ -49,7 +49,7 @@ Once provisioned, Kubernetes is installed and configured with:
 | **Kubernetes Dashboard** | `http://dashboard.local` | Web UI for cluster management |
 
 > *Domains are resolved via MetalLB-assigned LoadBalancer IPs.  
-Add entries to `/etc/hosts` for local access, e.g.:*
+Add entries to `/etc/hosts` for local access.*
 
 ---
 

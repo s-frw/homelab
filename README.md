@@ -50,8 +50,6 @@ Once provisioned, Kubernetes is installed and configured with:
 
 > *Domains are resolved via MetalLB-assigned LoadBalancer IPs.  
 Add entries to `/etc/hosts` for local access, e.g.:*
-```bash
-> 192.168.122.244  argocd.local grafana.local prometheus.local jupyter.local llm.local dashboard.local
 
 ---
 

@@ -13,6 +13,8 @@ spec:
       releaseName: kube-prom
       values: |
         grafana:
+          initChownData:
+            enabled: false
           adminUser: admin
           adminPassword: admin
           service:

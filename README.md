@@ -55,11 +55,11 @@ Add entries to `/etc/hosts` for local access.*
 
 # Screenshots
 
-### JupyterHub
-
-![JupyterHub UI](screenshots/jupyterhub.png)
-
 ### Grafana
 
 ![Grafana UI](screenshots/grafana1.png)
 ![Grafana UI](screenshots/grafana2.png)
+
+### JupyterHub
+
+![JupyterHub UI](screenshots/jupyterhub.png)

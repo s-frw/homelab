@@ -17,7 +17,10 @@ spec:
           persistence: 
               enabled: true
               initChownData: false
-          extraInitContainers: []
+          extraInitContainers:
+            - name: init-chown-data
+              image: busybox:1.31.1
+              command: ["sh", "-c", "chown -R 472:472 /var/lib/grafana || true"]
           securityContext:
             runAsUser: 472
             fsGroup: 472

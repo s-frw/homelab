@@ -1,17 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: monitoring
-  namespace: monitoring
+  name: kube-prometheus-stack
+  namespace: argocd
 spec:
   project: monitoring
   source:
     repoURL: 'https://github.com/s-frw/homelab.git'
     targetRevision: main
     path: argocd/helm-charts/kube-prometheus-stack
-      kustomize:
-      patches:
-        - path: kube-prometheus-stack-patch.yaml
     helm:
       releaseName: kube-prom
       values: |

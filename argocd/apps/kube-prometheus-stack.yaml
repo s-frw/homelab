@@ -9,6 +9,9 @@ spec:
     repoURL: 'https://github.com/s-frw/homelab.git'
     targetRevision: main
     path: argocd/helm-charts/kube-prometheus-stack
+      kustomize:
+      patches:
+        - path: kube-prometheus-stack-patch.yaml
     helm:
       releaseName: kube-prom
       values: |
@@ -17,10 +20,6 @@ spec:
           persistence: 
               enabled: true
               initChownData: false
-          extraInitContainers:
-            - name: init-chown-data
-              image: busybox:1.31.1
-              command: ["sh", "-c", "chown -R 472:472 /var/lib/grafana || true"]
           securityContext:
             runAsUser: 472
             fsGroup: 472

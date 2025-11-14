@@ -18,6 +18,9 @@ spec:
               enabled: true
               initChownData: false
           extraInitContainers: []
+          securityContext:
+            runAsUser: 472
+            fsGroup: 472
           adminUser: admin
           adminPassword: admin
           service:

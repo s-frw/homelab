@@ -55,6 +55,10 @@ Add entries to `/etc/hosts` for local access.*
 
 # Screenshots
 
+### ArgoCD
+
+![ArgoCD_UI](screenshots/argocd.png)
+
 ### Grafana
 
 ![Grafana UI](screenshots/grafana1.png)

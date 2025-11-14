@@ -17,6 +17,7 @@ spec:
           persistence: 
               enabled: true
               initChownData: false
+          extraInitContainers: []
           adminUser: admin
           adminPassword: admin
           service:

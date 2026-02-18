@@ -1,4 +1,4 @@
-# Kubernetes Homelab for CKA preparation
+# Kubernetes Homelab 
 Includes infrastructure provisioning with Terraform, Kubernetes setup with kubeadm, GitOps with ArgoCD, monitoring with Prometheus and Grafana.
 
 ---

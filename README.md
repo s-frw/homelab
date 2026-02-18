@@ -1,5 +1,5 @@
 # Kubernetes Homelab for CKA preparation
-Includes infrastructure provisioning with Terraform, Kubernetes setup with kubeadm, GitOps with ArgoCD, monitoring with Prometheus and Grafana and LLM endpoint with FastAPI.
+Includes infrastructure provisioning with Terraform, Kubernetes setup with kubeadm, GitOps with ArgoCD, monitoring with Prometheus and Grafana.
 
 ---
 # Overview
@@ -23,8 +23,6 @@ Once provisioned, Kubernetes is installed and configured with:
 **MetalLB** - LoadBalancer for bare-metal IP allocation  
 **Prometheus & Grafana** - Monitoring and visualization  
 **JupyterHub** - Multi-user data science environment  
-**FastAPI + LLM Sentiment Endpoint (pending)** - Example AI service deployed via Argo CD  
-**Kubeflow (pending)** - Automate AI workflows
 
 # **Kubernetes Stack**
 
@@ -35,7 +33,6 @@ Once provisioned, Kubernetes is installed and configured with:
 | **Prometheus** | Collects metrics from Kubernetes components |
 | **Grafana** | Visualizes metrics and dashboards |
 | **JupyterHub** | Multi-user notebook environment |
-| **FastAPI LLM Endpoint** | Simple sentiment analysis API backed by a local LLM model |
 
 # Access Endpoints
 
@@ -45,7 +42,6 @@ Once provisioned, Kubernetes is installed and configured with:
 | **Grafana** | `http://grafana.local` | Metrics visualization and dashboards |
 | **Prometheus** | `http://prometheus.local` | Metrics collection and queries |
 | **JupyterHub** | `http://jupyter.local` | Multi-user notebook environment |
-| **FastAPI Sentiment LLM** | `http://llm.local/sentiment` | REST API for sentiment analysis |
 | **Kubernetes Dashboard** | `http://dashboard.local` | Web UI for cluster management |
 
 > *Domains are resolved via MetalLB-assigned LoadBalancer IPs.  

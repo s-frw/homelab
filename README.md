@@ -1,5 +1,8 @@
 # Kubernetes Homelab 
-Includes infrastructure provisioning with Terraform, Kubernetes setup with kubeadm, GitOps with ArgoCD, monitoring with Prometheus and Grafana.
+A reproducible infrastructure repository for my previous Kubernetes homelab environment. Built with Terraform and kubeadm, featuring GitOps deployments through ArgoCD and full-stack observability using Prometheus and Grafana on KVM virtual machines.
+
+> [!NOTE]
+> This repository contains my previous Kubernetes homelab environment and is preserved for reference and reproducibility purposes.
 
 ---
 # Overview
